@@ -35,7 +35,7 @@ If u want to use it in dev mode with nodemon then :
 npm run dev
 ```
 
-#API endpoints
+# API endpoints
 
 | Endpoint          | Method | Description                   |
 |-------------------|--------|-------------------------------|
