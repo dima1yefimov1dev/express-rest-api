@@ -2,8 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { Product } from './models/products';
 import { productsRouter } from './routes/productsRoute';
+import { usersRouter } from './routes/usersRoute';
 
 dotenv.config();
 
@@ -15,7 +15,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use('/products', productsRouter);
+app.use('/api/products', productsRouter);
+app.use('/api/users', usersRouter);
 
 const startServer = async () => {
   try {

@@ -65,3 +65,14 @@ export const updateProduct = async (req: Request, res: Response) => {
     res.status(500).send(err.message);
   }
 }
+
+export const getProduct = async (req:Request, res: Response) => {
+  try {
+    const {id} = req.params;
+    const product = await Product.findById(id);
+
+    res.status(200).send(product);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
