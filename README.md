@@ -43,3 +43,4 @@ npm run dev
 | /products         | POST   | Create a new product          |
 | /products/:id     | PATCH  | Update a product by ID        |
 | /products/:id     | DELETE | Delete a product by ID        |
+| /users/register   | POST   | Register new user             |
