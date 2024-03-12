@@ -1,6 +1,6 @@
 # RESTful API for markeptlace
 
-This is RESTful API service, created with MongoDB + mongoose, Express, NodeJs and TypeScript. This api let you make marketplace with products, which you can add, update and delete.
+This is RESTful API service, created with MongoDB + mongoose, Express, NodeJs and TypeScript. This api let you make marketplace with products, which you can add, update and delete.Also here is added auth(register, login, logout) via JWT token.
 
 # Features
 
