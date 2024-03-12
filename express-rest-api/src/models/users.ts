@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import { UserRoles } from "../types/types";
 
 const UserSchema = new Schema({
   name: {
@@ -19,7 +20,8 @@ const UserSchema = new Schema({
 
   role: {
     type: String,
-    default: 'user',
+    default: UserRoles.USER,
+    enum: [UserRoles.ADMIN, UserRoles.USER],
   }
 });
 
