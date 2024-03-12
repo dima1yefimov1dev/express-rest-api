@@ -4,11 +4,11 @@ This is RESTful API service, created with MongoDB + mongoose, Express, NodeJs an
 
 # Features
 
-List of key features or functionalities of the project.
-
 - Node Js + TypeScript
 - MongoDB + mongoose
-- Express
+- Express, express-validator,
+- custom middleware for errors
+- auth with jwt tokens,
 
 # How to start:
 
@@ -23,6 +23,9 @@ Create .env with enviroment variables:
 ```bash
 PORT=3001
 DB_URL = 'your link here'
+JWT_ACCESS_SECRET_KEY='your secret key here',
+JWT_REFRESH_SECRET_KEY='your secret refresh key here'
+
 ```
 
 Start project and enjoy :)
@@ -39,8 +42,11 @@ npm run dev
 
 | Endpoint          | Method | Description                   |
 |-------------------|--------|-------------------------------|
-| /products         | GET    | Get all products              |
-| /products         | POST   | Create a new product          |
-| /products/:id     | PATCH  | Update a product by ID        |
-| /products/:id     | DELETE | Delete a product by ID        |
-| /users/register   | POST   | Register new user             |
+| /api/products     | GET    | Get all products              |
+| api/products      | POST   | Create a new product          |
+| api/products/:id  | PATCH  | Update a product by ID        |
+| api/products/:id  | DELETE | Delete a product by ID        |
+| api/auth/signup   | POST   | Register new user             |
+| api/auth/signin   | POST   | authorization                 |
+| api/auth/signout  | POST   | logout                        |
+| api/auth/refresh  | POST   | refresh token                 |
